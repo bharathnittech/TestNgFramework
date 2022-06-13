@@ -60,7 +60,7 @@
 			<version>3.10-FINAL</version>
 		</dependency>
 
-		<!-- Extent Report Dependency to generate customized report along with testing proofs-->
+		<!-- Extent Report Dependency -->
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>
