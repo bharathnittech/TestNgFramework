@@ -98,7 +98,7 @@
 					<version>2.22.1</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile></suiteXmlFile>
+							<suiteXmlFile>TestRunner\sanitySuite.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
