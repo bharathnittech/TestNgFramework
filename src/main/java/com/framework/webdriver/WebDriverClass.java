@@ -2,6 +2,7 @@ package com.framework.webdriver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -27,7 +28,12 @@ public class WebDriverClass extends ExtentReportsClass{
 	public void setupBrowser(String browserName) {
 		if(browserName.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			//options.addArguments("--start-maximized");
+		    options.addArguments("--disable-popup-blocking");
+
+			driver = new ChromeDriver(options);
+			//driver=new ChromeDriver();
 		}else if(browserName.equalsIgnoreCase("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
@@ -46,7 +52,7 @@ public class WebDriverClass extends ExtentReportsClass{
 	
 	@AfterMethod(alwaysRun=true)
 	public void closeBrowser() {
-		driver.quit();
+	//	driver.quit();
 	}
 	
 	public static synchronized void setDriver(WebDriver driver) {

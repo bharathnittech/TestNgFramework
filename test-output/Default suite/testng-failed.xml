@@ -5,7 +5,7 @@
     <classes>
       <class name="com.application.test.ApplicationTest">
         <methods>
-          <include name="verifyForgotPassword"/>
+          <include name="placeOrderAndRemoveProduct"/>
           <include name="setupBrowser"/>
           <include name="stopReporting"/>
           <include name="closeBrowser"/>
